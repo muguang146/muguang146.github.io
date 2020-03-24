@@ -1,5 +1,5 @@
 ---
-title: 搭建egg
+title: 搭建egg + ejs 框架
 tags: ['egg', 'node']
 ---
 > 我是使用脚手架搭建，内容参照egg官网，只是把我自己搭建的过程记录下来
@@ -134,3 +134,77 @@ module.exports = {
 ```
 测试 + helper
 ```
+
+## 知识扩展:规范
+controller只是设置数据和输出口的地方，egg支持我们将代码规范起来
+
+### context（逻辑）
+
+egg支持我们将逻辑区分出来，我们可以在app\extend里创建context.js，这里的函数，会被合并到egg内置的ctx对象里
+
+### service（服务）
+
+egg支持我们将网络服务区分出来，我们可以在app\service里创建js，js里的函数，会被合并到egg内置的ctx对象的service对象里
+
+### 例子
+
+我们在context.js里写函数
+```
+## app\extend\context.js
+module.exports = {
+  cs() {
+    return '测试';
+  }
+};
+```
+我们在service\里写函数
+```
+## app\service\home.js
+
+const Server = require('egg').Service;
+
+class HomeServer extends Server {
+  /**
+   * 测试用
+   * @param {String}} str
+   */
+
+  stingAdd(str) {
+    return str + '后手添加';
+  }
+
+}
+
+module.exports = HomeServer;
+```
+
+然后，我们在controller里使用这些逻辑
+```
+## controller\home.js
+const Controller = require('egg').Controller;
+
+class HomeController extends Controller {
+  async index() {
+    const { ctx } = this;
+    const css = ctx.cs();
+    const assignData = {
+      title: 'egg',
+      cs: css,
+    };
+    assignData.csTitle = this.service.home.stingAdd('?')
+    await ctx.render('home.ejs', assignData);
+  }
+}
+
+module.exports = HomeController;
+```
+
+ejs上的代码
+```
+  <h2><%= helper.stringAdd(cs) %></h2>
+  <h2><%= csTitle %></h2>
+```
+最后，页面输出的是
+
+> 测试 + helper\
+> ?后手添加

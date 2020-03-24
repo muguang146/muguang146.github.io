@@ -5,7 +5,7 @@
 
 ## menu -- 导航菜单显示{[@page:名字,@url:地址,@icon:图标]}
 menu:
-- page: JS
+- page: js
   url: /tags/js/
   icon:
 - page: node
