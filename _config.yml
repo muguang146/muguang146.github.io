@@ -98,7 +98,10 @@ theme: snippet
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:muguang146/muguang146.github.io.git
+  branch: master
+
 
 live2d:
   enable: true
