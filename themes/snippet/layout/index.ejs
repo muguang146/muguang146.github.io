@@ -1,8 +1,14 @@
 <% if (theme.carousel.img) { %>
 <div class="carousel">
-    <a href="<%= theme.carousel.url %>" target="_blank">
-        <img src="<%- url_for(theme.carousel.img) %>" alt="">
-    </a>
+    <% if(theme.carousel.link){ %>
+        <a href="<%= theme.carousel.url %>" target="_blank">
+            <img src="<%- url_for(theme.carousel.img) %>" alt="">
+        </a>
+    <% }else{ %>
+        <span>
+            <img src="<%- url_for(theme.carousel.img) %>" alt="">
+        </span>
+    <% } %>
 </div>
 <% } %>
 <% if(page.posts && page.posts.length){ %>

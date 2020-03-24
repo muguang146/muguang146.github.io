@@ -1,7 +1,7 @@
-categories: Categories
+categories: 类别
 search: 搜索
 tags: Tags
-tagcloud: Tag Cloud
+tagcloud: 标签
 tweets: Tweets
 prev: Prev
 next: Next
@@ -18,8 +18,8 @@ rss: RSS
 category: Category
 tag: Tag
 social: Social
-friend_links: 支持
-read_more: Read
+friend_links: 关于
+read_more: 回复
 home: Home
 archives: 记录
 about: About
@@ -31,8 +31,8 @@ date: Published Date
 update: Updated Date
 post_categories: Categories
 post_tags: Tags
-post_licence: License
+post_licence: 许可
 notification: 通知
-toc: Table of Contents
-visit_counter_uv: Visitors
-visit_counter_pv: Total
+toc: 目录
+visit_counter_uv: 访客
+visit_counter_pv: 共计

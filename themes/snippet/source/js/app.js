@@ -11,6 +11,7 @@ window.onload = function() {
         $gitcomment = document.getElementById("gitcomment"),
         $backToTop = document.getElementById("back-to-top"),
         $toc = document.getElementById("article-toc"),
+        $con = document.getElementsByClassName("container"),
         timer = null;
 
     //设备判断
@@ -82,9 +83,10 @@ window.onload = function() {
     window.addEventListener('scroll', function() {
         if ($toc) {
             var top = $toc.offsetTop;
+            var conTop = $con[1].offsetTop;
             var left = $toc.offsetLeft;
             var width = $toc.offsetWidth;
-            if (getScrollTop() <= top) {
+            if (getScrollTop() <= conTop) {
                 $toc.style = "";
             } else {
                 $toc.style.position = "fixed";

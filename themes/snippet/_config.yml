@@ -3,29 +3,29 @@
 #   language: zh-CN
 # ---------------------------------------------------------------
 
-## menu
-## 导航条
+## menu -- 导航菜单显示{[@page:名字,@url:地址,@icon:图标]}
 menu:
 - page: JS
-  url: /
+  url: /tags/js/
   icon:
 - page: node
-  url: /node
+  url: /tags/node/
 
-## favicon
+## favicon -- 网站图标位置{@favicon}
 favicon: /favicon.ico
 
-## Feed
+## rss --rss文件位置{@rss}
 rss: /atom.xml
 
-## Carousel
+## 设置carousel{@img:图片地址,@url:点击跳转链接(默认值:"javascript:")}
 carousel:
   img: './img/head-img.jpg'
-  url: 'https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=xs0pypd2'
+  url: ''
+  link: false
 
 # 各个小工具的设置
 
-## widgets
+## widgets -- 6个左边小工具{@widgets:[notification,category,archive,tagcloud,friends]}
 widgets:
   - search
   - notification
@@ -38,8 +38,8 @@ widgets:
 
 ## 搜索
 jsonContent:
-  searchLocal: true
-  searchGoogle: false
+  searchLocal: true   ## 是否启用本地搜索
+  searchGoogle: false ## 是否启用谷歌搜索
   posts:
     title: true
     text: true
@@ -47,38 +47,42 @@ jsonContent:
     categories: false
     tags: false
 
-## 网站公告设置
+
+## notification config --网站公告设置,支持 html 和 纯文本
 notification: |-
             <p>
                 主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
                 主题使用：<a href="https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md#常见问题" title="" target="_blank">常见使用问题</a> <br/>
-                支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
             </p>
 
 
-## 文章分类设置
+
+## 文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
 cate_config:
    show_count: true
    show_current: true
 
-## 文章归档设置
+
+## 文章归档设置{@arch_config:/*参数参考：https://hexo.io/zh-cn/docs/helpers.html#list-archives*/}
+## 推荐组合方式：[{type: 'monthly',format: 'YYYY年MM月'},{type: 'yearly',format: 'YYYY年'}]
 arch_config:
    type: 'monthly'
    format: 'YYYY年MM月'
    show_count: true
    order: -1
 
-## 标签云设置
+
+## 标签云设置{/*参数参考：http://www.goat1000.com/tagcanvas-options.php */}
 tagcloud:
-  tag3d: false
-  textColour: '#444'
-  outlineMethod: 'block'
-  outlineColour: '#FFDAB9'
-  interval: 30
-  freezeActive: true
-  frontSelect: true
-  reverse: true
-  wheelZoom: false
+  tag3d: false              ## 是否启用3D标签云
+  textColour: '#444'        ## 字体颜色
+  outlineMethod: 'block'    ## 选中模式(outline|classic|block|colour|size|none)
+  outlineColour: '#FFDAB9'  ## 选中模式的颜色
+  interval: 30              ## 动画帧之间的时间间隔，值越大，转动幅度越大
+  freezeActive: true        ## 选中的标签是否继续滚动
+  frontSelect: true         ## 不选标签云后部的标签
+  reverse: true             ## 是否反向触发
+  wheelZoom: false          ## 是否启用鼠标滚轮
 
 ## 友链设置
 links:
@@ -126,7 +130,7 @@ declaration:
   enable: true
   title: '转载声明'
   tip: |-
-      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+      商业转载请联系作者获得授权,非商业转载请注明出处 © 
 
 ## 文章打赏
 reward:
@@ -213,7 +217,7 @@ tencent_analytics:
 ### 百度站点认证
 baidu_site_verification:
 
-### 百度自动推送
+### 百度自动推送(@baidu_push: 是否启用百度自动推送)  参考网站: [百度站长资源](https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18)
 baidu_push: false
 
 #网站主题配置

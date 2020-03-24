@@ -1107,6 +1107,9 @@ pre {
    copyright
 ====================================================*/
 .copyright {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background: #111;
   font-size: 13px;
   text-align: center;
