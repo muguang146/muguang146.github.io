@@ -1,0 +1,38 @@
+categories: Categories
+search: 搜索
+tags: Tags
+tagcloud: Tag Cloud
+tweets: Tweets
+prev: Prev
+next: Next
+comment: Comments
+archive_a: Archives
+archive_b: "Archives: %s"
+page: Page %d
+recent_posts: Recent Posts
+newer: Newer
+older: Older
+share: Share
+rss_feed: RSS
+rss: RSS
+category: Category
+tag: Tag
+social: Social
+friend_links: 支持
+read_more: Read
+home: Home
+archives: 记录
+about: About
+search_local: 搜索
+search_google: googleSearch
+search_placeholder: 你要搜索什么？
+author: Author
+date: Published Date
+update: Updated Date
+post_categories: Categories
+post_tags: Tags
+post_licence: License
+notification: 通知
+toc: Table of Contents
+visit_counter_uv: Visitors
+visit_counter_pv: Total
