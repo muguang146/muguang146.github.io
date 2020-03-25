@@ -10,6 +10,8 @@ menu:
   icon:
 - page: node
   url: /tags/node/
+- page: webpack
+  url: /tags/webpack/
 
 ## favicon -- 网站图标位置{@favicon}
 favicon: /favicon.ico

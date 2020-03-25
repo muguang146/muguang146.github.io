@@ -1,5 +1,5 @@
 ---
-title: 搭建egg + ejs 框架
+title: 搭建egg项目
 tags: ['egg', 'node']
 ---
 > 我是使用脚手架搭建，内容参照egg官网，只是把我自己搭建的过程记录下来
@@ -208,3 +208,20 @@ ejs上的代码
 
 > 测试 + helper\
 > ?后手添加
+
+## js的使用
+差不多到了用js的时候了，egg有专门的静态文件存放地，我们把js等静态文件建在public文件夹下
+
+egg内置了自动继承静态资源配置
+
+### 使用方法
+
+如下所示静态资源，我们在html里可以通过"/public/index.js"进行访问
+```
+app/public
+    |--index.js
+```
+egg的静态资源管理还有一些默认配置。[参考资料](https://www.jianshu.com/p/5eb0d5a10267)
+
+### 打包
+只是简单的引用js肯定不行，我们要对js进行打包处理。[打包js](https://muguang146.github.io/2020/03/25/build-js/)
