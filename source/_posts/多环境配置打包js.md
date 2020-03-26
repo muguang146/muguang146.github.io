@@ -33,7 +33,8 @@ app/public
 
 【注】build是生产环境，dev是开发环境
 
-## webpack基础文件配置
+## webpack配置
+### webpack基础文件配置
 先配置webpack.config.js文件，我们脚本运行的就是这个文件
 ```
 module.exports = (env, argv) => {
@@ -47,7 +48,7 @@ webpack支持配置文件webpack.config.js中export出一个函数，该函数�
 
 这里我们用argv获取到了之前在scripts脚本里设置的mode参数，用于区分环境，然后根据不同的环境，引入不同的webpack配置，完成了webpack配置上的环境区分
 
-## webpack开发环境配置
+### webpack开发环境配置
 现在开发环境的webpack打包配置
 ```
 const path = require('path'); // 获取当前绝对路径
@@ -77,8 +78,8 @@ module.exports = {
 * filename: "[name].js"
 注意这里打包的文件名，我用了"[name]"，因为这次打包的，是多个js一起打包，我在入口文件的地方entry用了对象的写法，这是webpack支持的一种多个入口的写法，而我们在filename里用的name就是我们entry设置的对象键，比如{a:"../a.js"}，那么它的name就是a，打包出来的js名，就是a.js
 
-## webpack生产环境配置
-### 基础配置
+### webpack生产环境配置
+#### 基础配置
 首先，先进行打包，过程和开发环境差不多
 ```
 const path = require('path'); // 获取当前绝对路径
@@ -98,7 +99,7 @@ module.exports = {
 ```
 为了防止缓存，这里我们打包的js名添加了hash值，会根据js内容生成
 
-### 防堆积，打包js
+#### 防堆积，打包js
 因为有hash为后缀，我们的js打包，不会替换了，这样会出现堆积js的现象，于是我们要在打包js前，将目标文件夹里重复的js文件处理掉
 
 先上代码，这里同样是在webpack.prod.js修改
@@ -129,6 +130,7 @@ removeFile(entry, outputPath);
 这里我们用到了fs的一些函数。
 
 * fs.existsSync
+
 > 查询路径是否存在，返回Boolean值
 
 * fs.readdirSync
@@ -140,3 +142,4 @@ removeFile(entry, outputPath);
 > 删除文件操作
 
 主要是根据我们的打包入口文件，获取js名，然后将打包文件里，同名的js先删掉，这样，我们打包出来后，就不会有重复的js了
+
