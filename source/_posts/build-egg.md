@@ -1,6 +1,7 @@
 ---
 title: 搭建egg项目
 tags: ['egg', 'node']
+categories: ['egg']
 ---
 > 我是使用脚手架搭建，内容参照egg官网，只是把我自己搭建的过程记录下来
 
@@ -224,7 +225,7 @@ app/public
 egg的静态资源管理还有一些默认配置。[参考资料](https://www.jianshu.com/p/5eb0d5a10267)
 
 ### 打包
-只是简单的引用js肯定不行，我们要对js进行打包处理。[打包js](https://muguang146.github.io/2020/03/25/build-js/)、[多环境打包js](https://muguang146.github.io/2020/03/25/多环境配置打包js/)
+只是简单的引用js肯定不行，我们要对js进行打包处理。[打包js](https://muguang146.github.io/2020/03/25/build-js/)、[多环境打包js](https://muguang146.github.io/2020/03/25/build-js-environment/)
 
 ## 获取hash后缀的js
 > 打包好的hash后缀js如何使用？

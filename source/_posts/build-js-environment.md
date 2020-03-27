@@ -1,6 +1,7 @@
 ---
 title: 多环境配置打包js、打包多个js
 tags: ['js', 'webpack']
+categories: ['webpack']
 ---
 
 # 区分不同环境打包js

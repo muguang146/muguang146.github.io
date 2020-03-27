@@ -1,6 +1,7 @@
 ---
 title: 打包js
 tags: ['webpack', 'js']
+categories: ['webpack']
 ---
 ## 简易的打包js
 我在网上找了些资料，自己动手试了试打包js，记录下过程
